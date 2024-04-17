@@ -13,4 +13,5 @@ Route::get('/github/callback', [LoginController::class, 'githubCallback'])->name
 
 Route::group(['middleware' => 'auth'], function () {
     Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
+    Route::post('/json-export', [DashboardController::class, 'jsonExport'])->name('json.export');
 });
