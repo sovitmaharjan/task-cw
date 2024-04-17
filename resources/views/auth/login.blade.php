@@ -51,7 +51,7 @@
                         <div class="row m-t-40">
                             <div class="col-sm-12 text-center">
                                 <p class="text-muted">Login with</p>
-                                    <a href="{{ route('login.index') }}" class="btn btn-github waves-effect waves-light">
+                                    <a href="{{ route('github.redirect') }}" class="btn btn-github waves-effect waves-light">
                                         <i class="fab fa-github"></i>
                                     </a>
                                 </div>

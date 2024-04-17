@@ -8,6 +8,9 @@ Route::get('/login', [LoginController::class, 'index'])->name('login.index');
 Route::post('/login', [LoginController::class, 'login'])->name('login');
 Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 
+Route::get('/github/redirect', [LoginController::class, 'githubRedirect'])->name('github.redirect');
+Route::get('/github/callback', [LoginController::class, 'githubCallback'])->name('github.callback');
+
 Route::group(['middleware' => 'auth'], function () {
     Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
 });
